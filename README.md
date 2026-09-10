@@ -8,7 +8,7 @@ Kumpulan sintaks/command dasar Kali Linux untuk pengujian keamanan siber (info g
 
 ### Netdiscover
 ```
-netdiscover -r 10.0.2.0/24
+sudo netdiscover -r 10.0.2.0/24
 ```
 
 ### NMAP
@@ -19,6 +19,7 @@ nmap -p- --open -A 10.0.2.7
 nmap -p- --open -A --script vuln 10.0.2.7
 nmap 10.0.2.7 -sV -sC
 nmap -p- -sV 10.0.2.7
+nmap -sV -p- --min-rate 5000 <TARGET>      # lebih cepat
 ```
 
 ### Dirbuster
@@ -28,6 +29,11 @@ dirb http://10.0.2.7:8080
 dirb http://10.0.2.7 -X .php,.html,.txt
 dirb http://10.0.2.7 -w /usr/share/wordlists/dirb/common.txt
 dirb http://10.0.2.7 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+```
+
+### Feroxbuster
+```
+feroxbuster -u http://<TARGET>:PORT/ -w /usr/share/wordlists/dirb/common.txt
 ```
 
 ### DirSearch
