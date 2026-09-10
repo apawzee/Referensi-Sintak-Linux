@@ -172,6 +172,7 @@ Pada *info gathering* dari Dirbuster/Nikto, cari *path* yang mungkin rentan
 10.0.2.7:38080/cat.php?id=1      # tambahkan karakter petik ' sebelum 1
 'or 1=1;--                       # untuk inject pada login path
 ' or 1=1 -- -
+admin' -- -
 ```
 
 *Injection* dengan SQLMap
